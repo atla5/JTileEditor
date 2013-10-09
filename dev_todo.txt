@@ -1,0 +1,26 @@
+general/refactor:
+  - write code for calculating the (r,c) values in each PixelObject
+    to make accessing much easier
+  - refactor ColorChanger and ButtonPanel buttons to return focus
+    to the pixels themselves and not the ColorChonger object
+  - modify/create side panel to hold all of the tools/buttons, previews,
+    and overall color history.
+
+New functions/effects:
+  - graft over some of the ButtonPanel code into new code.
+  - block addition: right click to add a polygon. set inner 
+                    pixels to that color.
+	-find shortest path between two pixels.
+	-store all pixels inside of selection area in a list
+	-for pixel in list: pixel.setForeground(#{current color});
+  - increase resolution: duplicate resolution
+        -break each pixel into 4 separate pixels based on quadrant
+	-set all those pixels to the color of the parent
+	-construct new pixelGrid with new dimensions.
+
+new classes/features:
+  - create a grid of pixel objects as with previous build but 
+    not just canvases.
+  - create a new class 'Listener' to handle all of the actionListeners
+    for key commands and click events per pixel. 
+    	 -in a separate package containing all the other functions. (?)
