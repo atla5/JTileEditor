@@ -21,10 +21,13 @@ public class PixelObject extends Canvas{
 	 * Constructs a PixelObject with fed index, fresh white(f) on 
 	 * transparent(b) canvas, and fresh colorHistory.
 	 */
-	public PixelObject(int i){
+	public PixelObject(int i, int s){
 
 	    //set the index to int fed into it
 		this.id = i;
+		
+		//set size
+		this.setSize(s,s);
 
 	    //figure out the x and y from the index
 		int numRows = 15;
