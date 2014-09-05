@@ -5,6 +5,7 @@ general/refactor:
     to the pixels themselves and not the ColorChonger object
   - modify/create side panel to hold all of the tools/buttons, previews,
     and overall color history.
+  - refactor ColorChanger back into separate classes using Observers
 
 New functions/effects:
   - graft over some of the ButtonPanel code into new code.
@@ -17,9 +18,14 @@ New functions/effects:
         -break each pixel into 4 separate pixels based on quadrant
 	-set all those pixels to the color of the parent
 	-construct new pixelGrid with new dimensions.
+  - decrease resolution: half resolution
+	-take the average of each relevant value of each relevant 4-pixel
+	 group. 
+	-contstruct the new pixelgrid and set each to the  color created 
+	 by said average
 
 new classes/features:
-  - create a grid of pixel objects as with previous build but 
+  x create a grid of pixel objects as with previous build but 
     not just canvases.
   - create a new class 'Listener' to handle all of the actionListeners
     for key commands and click events per pixel. 
