@@ -1,11 +1,16 @@
 import java.awt.Canvas;
 import java.awt.Color;
 import java.util.ArrayList;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
+	
 /**
  * Object Class for each pixel on the screen.
  */
-public class PixelObject extends Canvas{
+public class PixelObject extends Canvas implements ActionListener{
 
 	//store the color history of each pixel.
 	ArrayList<Color> colorHistory = new ArrayList<Color>();
@@ -91,5 +96,9 @@ public class PixelObject extends Canvas{
 		colorHistory.add(c);
 	}
 
+	@Override
+	public void actionPerformed(ActionEvent E){
+		setColor(getCurrentColor());
+	}
 
 }

@@ -34,8 +34,8 @@ import javax.swing.JSlider;
 import javax.swing.JTextField;
 
 /**
- * Basic color changer for selecting desired color codes and gaining a better understanding rgba color values
- * and each components affect on output.
+ * Basic color changer for selecting desired color codes and gaining a better 
+ * understanding rgba color values and each components affect on output.
  * 
  */
 public class ColorChangerMain{
@@ -374,6 +374,8 @@ public class ColorChangerMain{
 			}else{}
 		}
 	}
+
+	public static Color getCurrentColor(){ return currentColor; }
 	
 	/**
 	 * updates the preview color and TextField values to match current values

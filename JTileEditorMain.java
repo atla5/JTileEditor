@@ -32,5 +32,5 @@ public class JTileEditorMain{
 		frame.setVisible(true);
 		
 	}
-	
+
 }
